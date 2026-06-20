@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+body{
+    background-color: rgb(255, 253, 249);
+}
+
+.about{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-display: swap;
+}
