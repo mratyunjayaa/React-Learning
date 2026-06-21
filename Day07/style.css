@@ -1,0 +1,629 @@
+/* Rich Luxury Colors */
+:root {
+  --bg: #0b0b0b;          /* Deep Black */
+  --card: #151515;        /* Charcoal */
+  --gold: #d4af37;        /* Luxury Gold */
+  --gold-light: #f4d160;  /* Soft Gold */
+  --emerald: #00c896;     /* Rich Emerald */
+  --white: #f8f8f8;
+  --grey: #b0b0b0;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left,
+      rgba(212, 175, 55, 0.12),
+      transparent 35%),
+    radial-gradient(circle at bottom right,
+      rgba(0, 200, 150, 0.12),
+      transparent 35%),
+    var(--bg);
+
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(15, 15, 15, 0.9);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid
+    rgba(212, 175, 55, 0.2);
+
+  padding: 18px 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Luxury Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d4af37 50%,
+      #00c896 50%
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  cursor: pointer;
+}
+
+/* Search */
+.search-input {
+  width: 280px;
+  padding: 14px 20px;
+
+  background: #222222;
+  color: #ffffff;
+
+  border: 2px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50px;
+
+  outline: none;
+  font-size: 1rem;
+
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #f4d160;
+  opacity: 0.85;
+}
+
+.search-input:focus {
+  background: #2c2c2c;
+  border-color: #d4af37;
+
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.35),
+    0 0 35px rgba(212, 175, 55, 0.15);
+}
+
+.search-input:focus {
+  border-color: var(--gold);
+
+  box-shadow:
+    0 0 25px
+    rgba(212, 175, 55, 0.35);
+}
+
+/* Coin Grid */
+.coin-container {
+  padding: 45px;
+
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit,
+      minmax(270px, 1fr));
+
+  gap: 30px;
+}
+
+/* Premium Cards */
+.coin-card {
+  background: var(--card);
+
+  border: 1px solid
+    rgba(212, 175, 55, 0.15);
+
+  border-radius: 28px;
+
+  padding: 30px;
+  text-align: center;
+
+  transition: 0.4s;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.45);
+}
+
+.coin-card:hover {
+  transform:
+    translateY(-12px);
+
+  border-color: var(--gold);
+
+  box-shadow:
+    0 20px 40px
+    rgba(212, 175, 55, 0.2);
+}
+
+.coin-image {
+  width: 80px;
+  margin-bottom: 18px;
+}
+
+.coin-name {
+  color: var(--gold-light);
+  margin-bottom: 15px;
+}
+
+.coin-symbol,
+.coin-price,
+.coin-rank,
+.coin-market-cap,
+.coin-change {
+  margin: 10px 0;
+  color: var(--grey);
+}
+
+.green {
+  color: var(--emerald);
+}
+
+.red {
+  color: #ff4d6d;
+}
+
+/* Ticker */
+.ticker {
+  flex: 1;
+  overflow: hidden;
+}
+
+.ticker-content {
+  display: inline-flex;
+  gap: 45px;
+  white-space: nowrap;
+
+  animation:
+    ticker 30s linear infinite;
+}
+
+.coin-item {
+  color: var(--white);
+  font-weight: 600;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer {
+  margin-top: 80px;
+  background: #090909;
+  color: #f5f5f5;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Glow */
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 50%;
+  filter: blur(140px);
+  top: -100px;
+  left: -100px;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 200, 150, 0.08);
+  border-radius: 50%;
+  filter: blur(140px);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.footer-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1400px;
+  margin: auto;
+  padding: 70px 60px;
+
+  display: grid;
+  grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1.5fr;
+
+  gap: 50px;
+}
+
+/* ==========================
+   BRAND
+========================== */
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  background: linear-gradient(
+    90deg,
+    #d4af37 50%,
+    #00c896 50%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-description {
+  color: #b5b5b5;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.footer-tagline {
+  color: #f4d160;
+  font-weight: 600;
+}
+
+/* ==========================
+   TITLES
+========================== */
+
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  width: 45px;
+  height: 3px;
+
+  background: #d4af37;
+  border-radius: 20px;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-list li {
+  margin-bottom: 15px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #b5b5b5;
+  transition: 0.3s;
+}
+
+.footer-list a:hover {
+  color: #d4af37;
+  padding-left: 8px;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.footer-section p {
+  color: #b5b5b5;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.footer-link {
+  display: inline-block;
+  margin-top: 15px;
+
+  padding: 12px 24px;
+  border-radius: 50px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  color: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+
+  transition: 0.35s;
+}
+
+.footer-link:hover {
+  background: #d4af37;
+  color: #111111;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(212, 175, 55, 0.25);
+}
+
+/* ==========================
+   SOCIALS
+========================== */
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #ffffff;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  background: #161616;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #00c896;
+  color: #111111;
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   BOTTOM BAR
+========================== */
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  padding: 25px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  color: #9c9c9c;
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    padding: 60px 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 50px 25px;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+
+  .footer-bottom {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .coin-container {
+    padding: 25px;
+    grid-template-columns:
+      repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 15px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .ticker {
+    width: 100%;
+  }
+
+  .ticker-content {
+    gap: 25px;
+    animation-duration: 20s;
+  }
+
+  .coin-item {
+    font-size: 0.85rem;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px 18px;
+  }
+
+  .coin-container {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .coin-card {
+    padding: 25px;
+    border-radius: 22px;
+  }
+
+  .coin-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .coin-name {
+    font-size: 1.2rem;
+  }
+
+  .coin-symbol,
+  .coin-price,
+  .coin-rank,
+  .coin-market-cap,
+  .coin-change {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+  }
+
+  .footer-logo {
+    font-size: 1.6rem;
+  }
+
+  .footer-text {
+    font-size: 0.95rem;
+  }
+
+  .footer-link {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================
+   Small Phones
+========================= */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .coin-card {
+    padding: 20px;
+  }
+
+  .coin-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .coin-name {
+    font-size: 1.05rem;
+  }
+
+  .coin-symbol,
+  .coin-price,
+  .coin-rank,
+  .coin-market-cap,
+  .coin-change {
+    font-size: 0.85rem;
+  }
+
+  .footer-logo {
+    font-size: 1.4rem;
+  }
+
+  .footer-text,
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
