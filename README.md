@@ -7,6 +7,8 @@ This repository documents my journey of learning React.js through daily practice
 | Project | Live Demo                   |
 | ------- | --------------------------- |
 | VikNova | https://viknova.netlify.app |
+| GitHub  |https://tomargit.netlify.app |
+|         |                             |
 
 ## 📚 What You'll Find Here
 
