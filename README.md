@@ -2,6 +2,12 @@
 
 This repository documents my journey of learning React.js through daily practice, projects, experiments, and notes. Each folder represents a stage of my learning process and contains source code, implementations, and hands-on exercises.
 
+## 🌐 Live Projects
+
+| Project | Live Demo                   |
+| ------- | --------------------------- |
+| VikNova | https://viknova.netlify.app |
+
 ## 📚 What You'll Find Here
 
 * React Fundamentals
@@ -26,8 +32,6 @@ This repository documents my journey of learning React.js through daily practice
 * Git & GitHub
 
 ## 📂 Repository Structure
-
-Each learning module is organized into separate folders for better navigation and progress tracking.
 
 ```text
 React-Journey/
