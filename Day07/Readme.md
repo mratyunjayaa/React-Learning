@@ -103,11 +103,9 @@ npm install react-redux
 npm parcel index.html
 ```
 
-## Live
+🚀 Live Demo
 
-```
-https://viknova.netlify.app/
----
+🔗 Live Link: https://viknova.netlify.app
 
 ## ⚙️ How It Works
 
